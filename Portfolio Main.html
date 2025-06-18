@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portfolio</title>
+
+  <link rel="stylesheet" href="CSS-portfolio.css">
+
+</head>
+
+<body>
+  <input type="checkbox" id="theme-toggle">
+  <div class="container">
+    <header>
+      <nav>
+        <div class="logo">Matias Crego Céspedes</div>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="inicio">
+      <h1 class="title">Portfolio</h1>
+      <p class="name">Primer Portfolio</p>
+      
+      <div class="theme-switcher">
+        <label for="theme-toggle" class="theme-btn">
+          Cambiar Tema
+        </label>
+      </div>
+    </div>
+
+    <section id="sobre-mi" style="scroll-margin-top: 70px">
+      <div class="foto">
+        <img src="YO.png" alt="Yo">
+      </div>
+      <div class="texto-sobre-mi">
+        <h1 style="color: darkviolet">Sobre Mí</h1>
+        <p>
+          Hola, soy Matias, tengo 16 años y soy un estudiante del colegio Instituto Industrial 
+          Luis A. Huergo. Me apasiona la programación y me gustaria poder trabajar de ello. 
+          Este es mi primer proyecto con HTML así que no será perfecto pero espero poder 
+          aprender un poco más del lenguaje. En este portfolio voy a mostrar algunos trabajos
+          que he hecho y voy a dejar una sección para contactarme. Espero que les guste.
+        </p>
+      </div>
+    </section>
+
+    <section id="proyectos" style="scroll-margin-top: 70px">
+      <div class="proyectos-header">
+        <h1 style="color: darkviolet">Proyectos</h1>
+        <p>Acá hay algunos de los pocos trabajos que hice desde que empezé a estudiar programación</p>
+      </div>
+      
+      <div class="proyectos-grid">
+        <div class="proyecto-card" onclick="mostrarProyecto('buscaminas')">
+          <h3>Buscaminas</h3>
+          <p style="font-family: Times New Roman">Haz click para ver más</p>
+        </div>
+        
+        <div class="proyecto-card" onclick="mostrarProyecto('space-invaders')">
+          <h3>Space Invaders</h3>
+          <p style="font-family: Times New Roman">Haz click para ver más</p>
+        </div>
+        
+        <div class="proyecto-card" onclick="mostrarProyecto('python')">
+          <h3>Ejercicios Python</h3>
+          <p style="font-family: Times New Roman">Haz click para ver más</p>
+        </div>
+      </div>
+
+      <div id="info-buscaminas" class="proyecto-info">
+        <h3>Buscaminas</h3>
+        <div class="proyecto-detalles">
+          <div class="proyecto-descripcion">
+            <p><strong>Descripción:</strong> Este fue mi primer paso con Pygame. Claramente inspirado 
+              en el famoso juego Buscaminas pero con algunos retoques y detalles
+              personales. Este proyecto fue hecho mayormente por mi parte, aunque 
+              tuve la ayuda de uno de mis compañeros de clases y para problemas que
+              superaban mi conocimiento utilize ChatGPT.
+            </p>
+            <div class="proyecto-links">
+              <a href="https://github.com/Matias-C-C/Buscaminas.git" class="proyecto-link">Ver Código</a>
+            </div>
+          </div>
+          <div class="Foto-busca">
+            <img src="Buscminas.png" alt="Foto">
+          </div>
+        </div>
+      </div>
+
+      <div id="info-space-invaders" class="proyecto-info">
+        <h3>Space Invaders</h3>
+        <div class="proyecto-detalles">
+          <p><strong>Descripción:</strong> Inspirado en el famoso juego Space Invaders, este juego
+            utiliza toda la informacion aprendida sobre Pygame. Fue un proyecto
+            individual que ponia en practica nuestros conocimientos y creatvidad.
+            Nuevamente utilize la IA para ayudarme a solucioanr problemas que,
+            aunque ya habia aprendido todo, superaban mis entendimientos e iba a
+            ser muy tedioso buscar el error entre todo el codigo.
+          </p>
+          <div class="Foto-busca">
+            <img src="Space invaders.png" alt="Foto">
+          </div>
+        </div>
+        <div class="proyecto-links">
+          <a href="https://github.com/Matias-C-C/Juego_Compu.git" class="proyecto-link">Ver Código</a>
+        </div>
+      </div>
+
+      <div id="info-python" class="proyecto-info">
+        <h3>Ejercicios de Python</h3>
+        <div class="proyecto-detalles">
+          <p><strong>Descripción:</strong> Estos son una guia de ejercicios que me sirvieron para
+            poder realizar los dos proyectos anteriores. Los ejercicios empiezan
+            desde cosas basicas hasta cosas ya avanzadas, como las clases y la
+            imprtacion de archivos. Recomiendo mucho ver esta guia si recien estan
+            empezando a programar, les servirá mucho para aprender rapidamente y
+            entender como funciona el lenguaje.
+          </p>
+          <div class="Foto-busca">
+            <img src="Python.png" alt="Foto">
+          </div>
+        </div>
+        <div class="proyecto-links">
+          <a href="https://github.com/Matias-C-C/Lab.-de-Algoritmos.git" class="proyecto-link">Repositorio</a>
+        </div>
+      </div>
+    </section>
+    
+    <div id="contacto" class="contacto-creditos-container" style="scroll-margin-top: 70px">
+      <div class="contact">
+        <h1>Contacto</h1>
+        <div class="contacto-botones">
+          <a href="https://www.instagram.com/mati.crego" class="contacto-btn" target="_blank">
+            Instagram
+          </a>
+          <a href="https://github.com/Matias-C-C" class="contacto-btn" target="_blank">
+            GitHub
+          </a>
+          <a href="Curriculum.pdf" class="contacto-btn" target="_blank">
+            CV
+          </a>
+          <a class="correo">
+            Correo: mcregocespedes@alumno.huergo.edu.ar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Portfolio de Matias Crego. Todos los derechos reservados.
+  </footer>
+
+  <script src="JavaScript-portfolio.js"></script>
+  
+</body>
+</html>
